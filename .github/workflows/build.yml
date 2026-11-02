@@ -175,7 +175,7 @@ jobs:
           set -euo pipefail
           cd "$RUNNER_TEMP/output"
           shopt -s nullglob
-          files=(aseprite-"$VERSION"-${{ matrix.target }}.{zip,tar.gz,dmg} aseprite-"$VERSION"-${{ matrix.target }}.*.sha256)
+          files=(aseprite-"$VERSION"-${{ matrix.target }}.*)
           [[ ${#files[@]} -gt 0 ]] || { echo "::error::no package found"; ls -la; exit 1; }
           ls -la "${files[@]}"
           for attempt in 1 2 3; do
