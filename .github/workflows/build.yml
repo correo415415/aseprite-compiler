@@ -100,7 +100,9 @@ jobs:
               {"target": "linux-x64",     "os": "ubuntu-22.04",     "arch": "x64"},
               {"target": "linux-arm64",   "os": "ubuntu-22.04-arm", "arch": "arm64"},
               {"target": "macos-x64",     "os": "macos-15-intel",   "arch": "x64"},
+              {"target": "macos-arm64",   "os": "macos-15",         "arch": "arm64"},
               {"target": "macos-arm64",   "os": "macos-26",         "arch": "arm64"},
+              {"target": "macos-arm64",   "os": "macos-15-xlarge",  "arch": "arm64"},
           ]
           wanted = os.environ["TARGETS"].replace(" ", "")
           if wanted.lower() != "all":
